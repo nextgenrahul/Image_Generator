@@ -12,7 +12,7 @@ const AppContextProvider = (props) => {
     const [ refreshToken, setRefreshToken ] = useState(localStorage.getItem('refreshToken'))
     const [ credit, setCredit ] = useState(false)
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl = import.meta.env.VITE_BACKEND_URL ?? "https://image-generator-backend-six.vercel.app";
 
     useEffect(() => {
         const fetchUser = async () => {
